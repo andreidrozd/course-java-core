@@ -19,7 +19,7 @@ class Task04 {
         // аргументов. Типы данных изменять нельзя
         int healthPoints = 1000;
         double regenerationPercentFromCurrentHealth = 100;
-        int hoursAfterRespawn = 10;
+        int hoursAfterRespawn = 7;
 
         int featureHealthPoint = calculateHealthPointsByTime(healthPoints, regenerationPercentFromCurrentHealth, hoursAfterRespawn);
         System.out.printf("Result: %d", featureHealthPoint);
@@ -34,8 +34,11 @@ class Task04 {
      * @return количество HP
      */
     static int calculateHealthPointsByTime(int healthPoints, double regenerationPercentFromCurrentHealth, int hoursAfterRespawn) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return 0;
+        int i = 1;
+        while (i <= hoursAfterRespawn) {
+            healthPoints += healthPoints * regenerationPercentFromCurrentHealth/100;
+            i++;
+        }
+        return healthPoints;
     }
 }
