@@ -32,20 +32,17 @@ class Task02 {
      * @return текст, который содержит столбец с номерами строк, где каждый номер на новой строке
      */
     static String generateNumbersColumn(int numberRows, boolean isEnableHeaderRow) {
-            if (isEnableHeaderRow) {
-                int i = 1;
-                while (i <= numberRows) {
-                    System.out.println(i);
-                    i++;
-                }
-            }
+        int i;
+        if (isEnableHeaderRow) {
+            i = 1;
+        }
             else {
-                int i = 2;
-                while (i <= numberRows) {
-                    System.out.println(i);
-                    i++;
-                }
-            }
+            i = 2;
+        }
+        while (i <= numberRows) {
+            System.out.println(i);
+            i++;
+        }
         return null;
     }
 }
