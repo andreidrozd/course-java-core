@@ -37,7 +37,7 @@ class Task02 {
                     sum += marks[i][j];
                 }
             }
-        return sum / marks.length;
+        return sum / (marks.length * marks[0].length);
     }
 
     /**
