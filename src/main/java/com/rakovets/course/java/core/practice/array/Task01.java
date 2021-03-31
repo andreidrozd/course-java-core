@@ -36,7 +36,7 @@ class Task01 {
         for (int i : marks) {
             mark += i;
         }
-        return mark/marks.length;
+        return (double) Math.round(mark / marks.length * 100.0)/100;
     }
 
     /**
