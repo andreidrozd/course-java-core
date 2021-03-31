@@ -31,9 +31,13 @@ class Task02 {
      * @return средняя арифметическая отметка
      */
     static double getAverageMark(int[][] marks) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        return 0.0;
+        int sum = 0;
+            for (int i = 0; i < marks.length; i++) {
+                for (int j = 0; j < marks[0].length; j++) {
+                    sum += marks[i][j];
+                }
+            }
+        return sum / marks.length;
     }
 
     /**
